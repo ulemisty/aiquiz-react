@@ -3,6 +3,7 @@ import generateQuestions from '../openaiClient';
 import { setQuestions } from '../quizSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import strings from "../strings";
+import cat from "../assets/cat.gif"
 
 function Loading({ onLoaded }) {
     const dispatch = useDispatch();
@@ -27,7 +28,7 @@ function Loading({ onLoaded }) {
 
     return (
         <>
-            <img src='src/assets/cat.gif' width={210}></img>
+            <img src={cat} width={210}></img>
             <h1>{strings[lang].loading}</h1>
         </>
     );

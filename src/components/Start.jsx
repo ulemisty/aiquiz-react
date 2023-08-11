@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setLang, setTopic } from "../quizSlice";
 import strings from "../strings";
+import king from "../assets/king.png"
 
 const Start = ({ onButtonClick }) => {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const Start = ({ onButtonClick }) => {
 
   return (
     <div className="start-container">
-      <img src="src/assets/king.png" height={210} alt="logo" className="logo" />
+      <img src={king} height={210} alt="logo" className="logo" />
       <h1>{strings[lang].welcomeMessage}</h1>
       <div className="input-container">
         <input
